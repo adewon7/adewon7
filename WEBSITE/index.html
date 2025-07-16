@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adeyemo Abdullahi | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS & Main Styles -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Adeyemo Abdullahi</h1>
+      <p>Web Developer & Social Media Manager</p>
+    </header>
+
+    <nav>
+      <div class="container">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <label class="switch">
+          <input type="checkbox" id="toggle-theme">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+
+    <main>
+      <section id="about" class="card about-section" data-aos="fade-up">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img src="Ade1.jpg" alt="My Photo">
+          <div class="about-text">
+            <p>Hey, I'm Adeyemo Abdullahi, a web developer and social media manager based in Nigeria. I specialize in creating modern websites and building strong digital brands.</p>
+            <p>My passion is helping people and businesses grow online by combining design, strategy, and creativity.</p>
+
+            <h3>Skills:</h3>
+            <ul class="skills-list">
+              <li>HTML & CSS</li>
+              <li>Responsive Design</li>
+              <li>Social Media Strategy</li>
+              <li>Content Creation</li>
+              <li>CorelDRAW (Graphics)</li>
+            </ul>
+
+            <a href="cv.pdf" download class="btn download-btn">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="project-showcase-section" data-aos="fade-up">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="project1.jpg" alt="Landing Page">
+      </div>
+      <div class="project-info">
+        <h3>Business Landing Page</h3>
+        <p>Built a modern landing page for a small startup focused on clean UX.</p>
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="project2.jpg" alt="Blog Layout">
+      </div>
+      <div class="project-info">
+        <h3>Personal Blog Layout</h3>
+        <p>A simple HTML/CSS layout for blogging or personal writing.</p>
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="project3.jpg" alt="Dashboard">
+      </div>
+      <div class="project-info">
+        <h3>Social Media Dashboard</h3>
+        <p>A UI concept for managing posts, analytics, and scheduling.</p>
+        <a href="#" class="project-btn">Coming Soon</a>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+</html>
+<section id="hero" class="hero-section">
+  <div class="hero-content container">
+    <h1>Adeyemo Abdullahi</h1>
+    <p>Web Developer & Social Media Manager</p>
+    <div class="stats">
+      <div><strong>+04</strong><span>Years Experience</span></div>
+      <div><strong>+10</strong><span>Clients Worldwide</span></div>
+      <div><strong>+8</strong><span>Projects Completed</span></div>
+    </div>
+  </div>
+</section>
+<section id="about" class="about-split-section">
+  <div class="about-left">
+    <img src="Ade1.jpg" alt="Adeyemo Abdullahi">
+  </div>
+  <div class="about-right">
+    <h2>About Me</h2>
+    <p>I'm Adeyemo Abdullahi, a web developer and social media manager based in Nigeria. I help businesses and individuals build clean, responsive websites and manage their digital presence with strategy and creativity.</p>
+    
+    <h3>What I Use</h3>
+    <ul class="tools-list">
+      <li>HTML & CSS</li>
+      <li>CorelDRAW</li>
+      <li>Canva</li>
+      <li>Responsive Web Design</li>
+      <li>Instagram, Facebook, X and LinkedIn Strategy</li>
+    </ul>
+  </div>
+</section>
+ <footer>
+      <p>© 2025 Adeyemo. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/adebit7" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top">⬆️</button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggle = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    toggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+    });
+
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
