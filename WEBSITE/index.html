@@ -1,150 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Adeyemo Abdullahi | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Adeyemo Abdullahi Web Developer and Social Media Manager based in Nigeria. I create modern websites and help brands grow online.">
+  <meta name="keywords" content="Adeyemo Abdullahi, web developer, social media manager, Nigeria, portfolio, HTML, CSS, responsive design">
+  <meta name="author" content="Adeyemo Abdullahi">
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- AOS & Main Styles -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <h1>Adeyemo Abdullahi</h1>
-      <p>Web Developer & Social Media Manager</p>
-    </header>
 
-    <nav>
-      <div class="container">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <label class="switch">
-          <input type="checkbox" id="toggle-theme">
-          <span class="slider"></span>
-        </label>
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="site-title">Adeyemo Abdullahi</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#store">Store</a>
+      <a href="#about">About</a>
+      <label class="switch">
+        <input type="checkbox" id="toggle-theme">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Home -->
+  <section id="home" class="page-section">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h1>Adeyemo Abdullahi</h1>
+        <p>Software Developer & Social Media Manager</p>
+        <a href="#contact" class="btn hero-btn">Let's Work Together</a>
       </div>
-    </nav>
+      <div class="hero-image">
+        <img src="adepro.jpg" alt="Adeyemo Abdullahi" />
+      </div>
+    </div>
 
-    <main>
-      <section id="about" class="card about-section" data-aos="fade-up">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <img src="Ade1.jpg" alt="My Photo">
-          <div class="about-text">
-            <p>Hey, I'm Adeyemo Abdullahi, a web developer and social media manager based in Nigeria. I specialize in creating modern websites and building strong digital brands.</p>
-            <p>My passion is helping people and businesses grow online by combining design, strategy, and creativity.</p>
-
-            <h3>Skills:</h3>
-            <ul class="skills-list">
-              <li>HTML & CSS</li>
-              <li>Responsive Design</li>
-              <li>Social Media Strategy</li>
-              <li>Content Creation</li>
-              <li>CorelDRAW (Graphics)</li>
-            </ul>
-
-            <a href="cv.pdf" download class="btn download-btn">Download CV</a>
-          </div>
+    <!-- Projects I've Built -->
+    <div class="home-projects container">
+      <h2>Project and featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Mindfinance Academy</h3>
+          <p>MindFinance Academy is a simple, mobile friendly site that helps young people learn the basics of money and investing.</p>
+          <a href="https://academy.mindfinance.io/" class="project-link" target="_blank">Visit Website</a>
         </div>
-      </section>
-
-      <section id="projects" class="project-showcase-section" data-aos="fade-up">
-  <h2>Featured Projects</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <div class="project-thumbnail">
-        <img src="project1.jpg" alt="Landing Page">
-      </div>
-      <div class="project-info">
-        <h3>Business Landing Page</h3>
-        <p>Built a modern landing page for a small startup focused on clean UX.</p>
-        <a href="#" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumbnail">
-        <img src="project2.jpg" alt="Blog Layout">
-      </div>
-      <div class="project-info">
-        <h3>Personal Blog Layout</h3>
-        <p>A simple HTML/CSS layout for blogging or personal writing.</p>
-        <a href="#" class="project-btn">View Project</a>
+        <div class="project-card">
+          <h3>Soja Boy</h3>
+          <p>SojaBoy Website is a clean, single-page portfolio built for the Nigerian artist SojaBoy, featuring his music, social links, and press kit.</p>
+          <a href="https://sojaboy.com.ng/about/" class="project-link" target="_blank">Visit Website</a>
+        </div>
+        <div class="project-card">
+          <h3>Arcade Suit Hotel</h3>
+          <p>Arcade Suit Hotel is a simple booking website made for a local hotel, with room listings, contact form, and map integration.</p>
+          <a href="https://arcadesuites.ng/" class="project-link" target="_blank">Visit Website</a>
+        </div>
+        <div class="project-card">
+          <h3>Codewithhassan Community</h3>
+          <p>CodeWithHassan is a developer community led by Hassan, focused on learning, sharing, and building real-world projects together.</p>
+          <a href="https://codewithhassan.com.ng/" class="project-link" target="_blank">Visit Website</a>
+        </div>
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-thumbnail">
-        <img src="project3.jpg" alt="Dashboard">
-      </div>
-      <div class="project-info">
-        <h3>Social Media Dashboard</h3>
-        <p>A UI concept for managing posts, analytics, and scheduling.</p>
-        <a href="#" class="project-btn">Coming Soon</a>
+    <!-- Technologies I Use -->
+    <div class="tools-used container">
+      <h2>Digital Arsenal</h2>
+      <div style="background: #f4f4f4; border: 1px solid #ddd; border-radius: 12px; padding: 40px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 100%;">
+        <i class="fab fa-html5" title="HTML5" style="font-size: 5rem; color: #e34c26;"></i>
+        <i class="fab fa-css3-alt" title="CSS3" style="font-size: 5rem; color: #264de4;"></i>
+        <i class="fab fa-js" title="JavaScript" style="font-size: 5rem; color: #f0db4f;"></i>
+        <i class="fab fa-github" title="GitHub" style="font-size: 5rem; color: #000;"></i>
+        <img src="https://cdn.worldvectorlogo.com/logos/coreldraw-1.svg" title="CorelDRAW" style="height: 70px;" />
+        <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" title="Canva" style="height: 70px;" />
+        <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon.svg" title="WordPress" style="height: 70px;" />
       </div>
     </div>
-  </div>
-</section>
-    </main>
-</html>
-<section id="hero" class="hero-section">
-  <div class="hero-content container">
-    <h1>Adeyemo Abdullahi</h1>
-    <p>Web Developer & Social Media Manager</p>
-    <div class="stats">
-      <div><strong>+04</strong><span>Years Experience</span></div>
-      <div><strong>+10</strong><span>Clients Worldwide</span></div>
-      <div><strong>+8</strong><span>Projects Completed</span></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="page-section" style="display: none;">
+    <div class="about-section">
+      <h2>About Me</h2>
+      <p>I'm Adeyemo Abdullahi, a software developer and social media manager with a passion for building clean, functional, and user-friendly websites. I enjoy creating digital experiences that not only look good but work seamlessly.</p>
+      <p>With a growing portfolio and real-world client experience, I’m focused on becoming one of the best developers in my region. I also aim to build a trusted social media management brand for individuals and businesses.</p>
     </div>
-  </div>
-</section>
-<section id="about" class="about-split-section">
-  <div class="about-left">
-    <img src="Ade1.jpg" alt="Adeyemo Abdullahi">
-  </div>
-  <div class="about-right">
-    <h2>About Me</h2>
-    <p>I'm Adeyemo Abdullahi, a web developer and social media manager based in Nigeria. I help businesses and individuals build clean, responsive websites and manage their digital presence with strategy and creativity.</p>
-    
-    <h3>What I Use</h3>
-    <ul class="tools-list">
-      <li>HTML & CSS</li>
-      <li>CorelDRAW</li>
-      <li>Canva</li>
-      <li>Responsive Web Design</li>
-      <li>Instagram, Facebook, X and LinkedIn Strategy</li>
-    </ul>
-  </div>
-</section>
- <footer>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="page-section" style="display: none;">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Projects I’ve Built</h2>
+      <div class="project-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+        <div class="project-card" style="background-color: #f9f9f9; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px;">
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px;">MindFinance Academy</h3>
+          <p style="font-size: 0.95rem; color: #555;">An online learning platform focused on personal finance education and investment awareness.</p>
+          <a href="https://mindfinanceacademy.com" target="_blank" style="display: inline-block; margin-top: 15px; background-color: #007bff; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none;">View Site</a>
+        </div>
+        <div class="project-card" style="background-color: #f9f9f9; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px;">
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px;">SojaBoy</h3>
+          <p style="font-size: 0.95rem; color: #555;">An official website for a music artist, featuring his songs, videos, updates, and booking details.</p>
+          <a href="https://sojaboy.com" target="_blank" style="display: inline-block; margin-top: 15px; background-color: #007bff; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none;">View Site</a>
+        </div>
+        <div class="project-card" style="background-color: #f9f9f9; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px;">
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Arcade Suite Hotel</h3>
+          <p style="font-size: 0.95rem; color: #555;">A clean and modern hotel website with room listings, contact info, and reservation links.</p>
+          <a href="https://arcadesuitehotel.com" target="_blank" style="display: inline-block; margin-top: 15px; background-color: #007bff; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none;">View Site</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Social Media Campaign</h3>
+        <p>Led a campaign for a local brand that boosted their engagement by over 70% in 3 months.</p>
+        <a href="#" class="project-link">Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="page-section" style="display: none;">
+    <div class="container">
+      <h2>What I Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-code service-icon"></i>
+          <h3>Web Development</h3>
+          <p>I build clean and responsive websites using HTML, CSS, and JavaScript that work on all devices.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-bullhorn service-icon"></i>
+          <h3>Social Media Management</h3>
+          <p>I help businesses grow online with smart content planning and audience engagement.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-pen-nib service-icon"></i>
+          <h3>Graphic Design</h3>
+          <p>I create visuals with tools like CorelDRAW and Canva that match your brand style.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store -->
+  <section id="store" class="page-section" style="display: none;">
+    <div class="container">
+      <h2>My Store</h2>
+      <p>Coming soon: digital templates, social media kits, and more.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="page-section" style="display: none;">
+     <div class="container">
+       <h2>Let's Work Together</h2>
+       <p>If you have a project in mind or just want to say hello, feel free to reach out.</p>
+       <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+         <input type="text" name="name" placeholder="Your name" required>
+         <input type="email" name="email" placeholder="Your email" required>
+         <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+         <button type="submit" class="btn">Send Message</button>
+       </form>
+     </div>
+      <div class="contact-socials" style="margin-top: 50px; text-align: center;">
+     <a href="https://x.com/adebit7" target="_blank" style="margin: 0 35px; font-size: 5.5rem; color: #000;">
+       <i class="fab fa-x-twitter"></i>
+     </a>
+     <a href="https://instagram.com/adebit7" target="_blank" style="margin: 0 50px; font-size: 5.5rem; color: #E1306C;">
+       <i class="fab fa-instagram"></i>
+     </a>
+     <a href="https://linkedin.com/in/abdullahi-adeyemo-279a10321" target="_blank" style="margin: 0 50px; font-size: 5.5rem; color: #0077B5;">
+       <i class="fab fa-linkedin"></i>
+     </a>
+     <a href="https://github.com/Adewon7" target="_blank" style="margin: 0 50px; font-size: 5.5rem; color: #000;">
+       <i class="fab fa-github"></i>
+     </a>
+     <a href="https://wa.me/2349072112598" target="_blank" style="margin: 0 50px; font-size: 5.5rem; color: #25D366;">
+       <i class="fab fa-whatsapp"></i>
+     </a>
+     <div class="contact-details" style="text-align: center; margin-top: 40px; font-size: 1.4rem; line-height: 2;">
+      <p><i class="fas fa-envelope"></i> ade72111598@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +234 907 211 2598</p>
+      <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+   </div>
+ </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
       <p>© 2025 Adeyemo. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="https://instagram.com/adebit7" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="social-links" style="margin-top: 40px; text-align: center;">
+        <a href="https://x.com/adebit7" target="_blank" style="margin: 0 15px; font-size: 2rem; color: #000;"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://instagram.com/adebit7" target="_blank" style="margin: 0 15px; font-size: 2rem; color: #E1306C;"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/abdullahi-adeyemo-279a10321" target="_blank" style="margin: 0 15px; font-size: 2rem; color: #0077B5;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Adewon7" target="_blank" style="margin: 0 15px; font-size: 2rem; color: #000;"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/2349072112598" target="_blank" style="margin: 0 15px; font-size: 2rem; color: #25D366;"><i class="fab fa-whatsapp"></i></a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
-  <!-- Back to Top Button -->
+  <!-- Back to Top -->
   <button id="backToTop" title="Go to top">⬆️</button>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
-
     const toggle = document.getElementById('toggle-theme');
     const body = document.body;
-
     toggle.addEventListener('change', () => {
       body.classList.toggle('dark-mode');
     });
@@ -153,9 +226,27 @@
     window.addEventListener("scroll", () => {
       backToTopBtn.style.display = window.pageYOffset > 300 ? "block" : "none";
     });
-
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('.page-section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.getAttribute('href').substring(1);
+        sections.forEach(section => section.style.display = 'none');
+        document.getElementById(target).style.display = 'block';
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      sections.forEach(section => section.style.display = 'none');
+      const home = document.getElementById('home');
+      if (home) home.style.display = 'block';
+    });
   </script>
 </body>
+</html>
