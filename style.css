@@ -80,6 +80,27 @@ nav {
 .navbar h1, .site-title {
   font-family: 'Pirata One', cursive;
 }
+.hero, /* or your header container */
+.hero h1, .hero p, .hero a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 {
+  font-size: 6vw;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+}
 
 .hero-section {
   font-family: 'Poppins', sans-serif;
@@ -88,6 +109,7 @@ nav {
   background: #f4f4f4;
   color: #111;
 }
+
 
 .hero-section h1,
 h1,
@@ -1899,5 +1921,6 @@ body.dark-mode .about-section h2 {
 body.dark-mode .about-section p {
   color: #cccccc;
 }
+
 
 
