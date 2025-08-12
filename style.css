@@ -1975,35 +1975,46 @@ body.dark-mode .download-btn:hover {
   background-color: #e5c100 !important;
   color: #000 !important;
 }
-/* === Mobile Responsive Fixes === */
+/* Mobile Responsive Fix */
 @media (max-width: 768px) {
   /* Navbar */
   .nav-links {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
   }
 
+  /* Hero Section */
   .hero-content {
     flex-direction: column;
     text-align: center;
   }
-
   .hero-image img {
-    max-width: 80%;
+    max-width: 90%;
+    height: auto;
   }
 
-  /* Project Cards */
-  .projects-grid, .project-grid {
+  /* Projects */
+  .projects-grid,
+  .project-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .project-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
 
   /* Digital Arsenal */
   .tools-logos {
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+  }
+  .tools-logos i,
+  .tools-logos img {
+    height: 60px;
+    font-size: 3rem !important;
   }
 
   /* Contact Section */
@@ -2012,15 +2023,14 @@ body.dark-mode .download-btn:hover {
   }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
-
   .hero-text p {
     font-size: 1rem;
   }
-
   .btn {
     font-size: 0.9rem;
     padding: 8px 14px;
