@@ -2069,6 +2069,32 @@ body.dark-mode .download-btn:hover {
     padding: 6px 10px;
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* smaller gap */
+    padding: 5px 0; /* reduce padding so it’s shorter */
+  }
+
+  .site-title {
+    font-size: 1.2rem; /* smaller text so it fits better */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem; /* slightly smaller links */
+  }
+
+  .nav-links a {
+    padding: 4px 8px;
+  }
+}
+
 
 
 
