@@ -2104,19 +2104,19 @@ body.dark-mode .download-btn:hover {
   .site-title {
     margin-bottom: 10px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .nav-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 1px;
   }
 
   .nav-links a {
-    padding: 6px 10px;
-    font-size: 0.9rem;
+    padding: 4px 10px;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 768px) {
@@ -2152,19 +2152,19 @@ body.dark-mode .download-btn:hover {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
   }
 
   .site-title {
     font-size: 1rem;
     white-space: nowrap;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .nav-links {
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 5px;
     overflow-x: auto;
   }
 
@@ -2195,7 +2195,7 @@ body.dark-mode .download-btn:hover {
   .nav-links {
     display: flex;
     flex-wrap: nowrap;
-    gap: 4px; /* Reduced space between links */
+    gap: 1px; /* Reduced space between links */
     overflow-x: auto;
   }
 
@@ -2210,6 +2210,7 @@ body.dark-mode .download-btn:hover {
     margin-left: 5px;
   }
 }
+
 
 
 
