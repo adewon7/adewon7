@@ -2036,3 +2036,20 @@ body.dark-mode .download-btn:hover {
     padding: 8px 14px;
   }
 }
+/* Keep navbar horizontal but fit on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* prevent breaking into 2 lines */
+    overflow-x: auto; /* allow scroll if too long */
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+  .nav-links a {
+    padding: 6px 8px;
+    white-space: nowrap; /* keep each link on one line */
+  }
+}
+
+
