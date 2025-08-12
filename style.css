@@ -2042,7 +2042,6 @@ body.dark-mode .download-btn:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap; /* prevent breaking into 2 lines */
-    overflow-x: auto; /* allow scroll if too long */
     gap: 10px;
     font-size: 0.85rem;
   }
@@ -2061,7 +2060,6 @@ body.dark-mode .download-btn:hover {
   .nav-links {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* allow wrapping if needed */
     justify-content: center;
     gap: 10px;
     font-size: 0.9rem;
@@ -2071,6 +2069,7 @@ body.dark-mode .download-btn:hover {
     padding: 6px 10px;
   }
 }
+
 
 
 
