@@ -2074,7 +2074,7 @@ body.dark-mode .download-btn:hover {
     flex-direction: column;
     align-items: center;
     gap: 6px; /* smaller gap */
-    padding: 2.5px 0; /* reduce padding so it’s shorter */
+    padding: 5.5px 0; /* reduce padding so it’s shorter */
   }
 
   .site-title {
@@ -2094,6 +2094,7 @@ body.dark-mode .download-btn:hover {
     padding: 4px 8px;
   }
 }
+
 
 
 
