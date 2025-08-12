@@ -2147,6 +2147,39 @@ body.dark-mode .download-btn:hover {
     white-space: nowrap;
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .site-title {
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    padding: 6px 8px;
+  }
+
+  .switch {
+    flex-shrink: 0;
+  }
+}
+
+
 
 
 
