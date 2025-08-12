@@ -2073,31 +2073,27 @@ body.dark-mode .download-btn:hover {
   .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 6px; /* smaller gap */
-    padding: 5.5px 0; /* reduce padding so it’s shorter */
+    padding: 10px 0;
   }
 
   .site-title {
-    font-size: 0.9rem; /* smaller text so it fits better */
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.3rem;
   }
 
   .nav-links {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    font-size: 0.85rem; /* slightly smaller links */
   }
 
   .nav-links a {
-    padding: 4px 8px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
   }
 }
-
-
-
-
 
 
 
