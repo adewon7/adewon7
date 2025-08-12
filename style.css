@@ -1936,8 +1936,93 @@ body.dark-mode .about-section p {
   font-size: clamp(1rem, 4vw, 1.5rem);
   margin-bottom: 2rem;
 }
+/* === Dark Mode Section Background Fix === */
+body.dark-mode .page-section {
+  background-color: #000 !important;
+  color: #fff !important;
+}
 
+body.dark-mode .page-section h1,
+body.dark-mode .page-section h2,
+body.dark-mode .page-section h3,
+body.dark-mode .page-section p,
+body.dark-mode .page-section li,
+body.dark-mode .page-section a {
+  color: #fff !important;
+}
 
+body.dark-mode .project-card,
+body.dark-mode .contact-section,
+body.dark-mode .about-section {
+  background-color: #000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
 
+body.dark-mode .skills-list li {
+  background-color: #222 !important;
+  color: #fff !important;
+}
 
+body.dark-mode .btn,
+body.dark-mode .download-btn {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
 
+body.dark-mode .btn:hover,
+body.dark-mode .download-btn:hover {
+  background-color: #e5c100 !important;
+  color: #000 !important;
+}
+/* === Mobile Responsive Fixes === */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+
+  /* Project Cards */
+  .projects-grid, .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Digital Arsenal */
+  .tools-logos {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Contact Section */
+  .contact-details {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
