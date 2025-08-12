@@ -2073,12 +2073,12 @@ body.dark-mode .download-btn:hover {
   .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 4px; /* smaller gap */
-    padding: 5px 0; /* reduce padding so it’s shorter */
+    gap: 3px; /* smaller gap */
+    padding: 2.5px 0; /* reduce padding so it’s shorter */
   }
 
   .site-title {
-    font-size: 1.2rem; /* smaller text so it fits better */
+    font-size: 0.7rem; /* smaller text so it fits better */
   }
 
   .nav-links {
@@ -2087,13 +2087,14 @@ body.dark-mode .download-btn:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    font-size: 0.85rem; /* slightly smaller links */
+    font-size: 0.65rem; /* slightly smaller links */
   }
 
   .nav-links a {
-    padding: 4px 8px;
+    padding: 2px 4px;
   }
 }
+
 
 
 
