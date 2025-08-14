@@ -2022,4 +2022,29 @@ body.dark-mode .download-btn:hover {
     text-align: center;
   }
 }
+/* Mobile navbar fix */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Smaller gap so everything fits */
+    flex-wrap: nowrap;
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Smaller text for mobile */
+    padding: 4px 6px; /* Reduce padding */
+  }
+
+  .switch {
+    transform: scale(0.8); /* Make dark mode switch smaller */
+  }
+}
+
 
