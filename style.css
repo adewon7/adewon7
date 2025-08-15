@@ -2046,5 +2046,36 @@ body.dark-mode .download-btn:hover {
     transform: scale(0.8); /* Make dark mode switch smaller */
   }
 }
+/* Force navbar into a single row on mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 5px 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 3px 5px;
+    white-space: nowrap; /* Keep text from breaking into new lines */
+  }
+
+  .switch {
+    transform: scale(0.75);
+  }
+}
+
+
 
 
