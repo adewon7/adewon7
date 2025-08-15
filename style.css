@@ -2120,7 +2120,7 @@ body.dark-mode .download-btn:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 4px;
+    gap: 0.3px;
   }
 
   .nav-links a {
@@ -2133,6 +2133,7 @@ body.dark-mode .download-btn:hover {
     transform: scale(0.8);
   }
 }
+
 
 
 
