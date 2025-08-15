@@ -2133,6 +2133,37 @@ body.dark-mode .download-btn:hover {
     transform: scale(0.8);
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack title above nav links */
+    align-items: center;
+  }
+
+  .site-title {
+    margin-bottom: 4px; /* Small gap below title */
+    text-align: center;
+    font-size: 1.1rem; /* Slightly smaller for mobile */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 3px; /* Minimal gap */
+  }
+
+  .nav-links a {
+    font-size: 12px; /* Smaller to fit more items */
+    padding: 2px 4px;
+    white-space: nowrap;
+  }
+
+  .switch {
+    transform: scale(0.75); /* Smaller toggle */
+  }
+}
+
 
 
 
