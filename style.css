@@ -2182,7 +2182,7 @@ body.dark-mode .download-btn:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 2px; /* Very small gap */
+    gap: 0.2px; /* Very small gap */
     overflow-x: auto; /* Allow scroll if needed on tiny devices */
     -webkit-overflow-scrolling: touch;
   }
@@ -2198,6 +2198,7 @@ body.dark-mode .download-btn:hover {
     margin-left: 2px;
   }
 }
+
 
 
 
