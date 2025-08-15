@@ -2090,7 +2090,7 @@ body.dark-mode .download-btn:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2px; /* Reduced by ~70% from typical 6-8px */
+    gap: 0.3px; /* Reduced by ~70% from typical 6-8px */
     flex-wrap: nowrap;
   }
 
@@ -2104,6 +2104,7 @@ body.dark-mode .download-btn:hover {
     transform: scale(0.75);
   }
 }
+
 
 
 
