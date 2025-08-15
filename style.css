@@ -2163,6 +2163,42 @@ body.dark-mode .download-btn:hover {
     transform: scale(0.75); /* Smaller toggle */
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Title on top */
+    align-items: center;
+    padding: 6px 0;
+  }
+
+  .site-title {
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 1rem; /* Compact title */
+    line-height: 1.2;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2px; /* Very small gap */
+    overflow-x: auto; /* Allow scroll if needed on tiny devices */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links a {
+    font-size: 11px; /* Small enough to fit */
+    padding: 2px 4px;
+    white-space: nowrap;
+  }
+
+  .switch {
+    transform: scale(0.7); /* Smaller dark mode toggle */
+    margin-left: 2px;
+  }
+}
+
 
 
 
