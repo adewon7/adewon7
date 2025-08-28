@@ -2272,6 +2272,42 @@ body.dark-mode .download-btn:hover {
     display: block !important;
   }
 }
+/* Tighter Hero Section on Mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 10px 5px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-text h1 {
+    font-size: 20px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-text p {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-btn {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+  }
+
+  .hero-image img {
+    max-width: 55% !important;  /* smaller image */
+    height: auto !important;
+    margin: 8px auto 0 auto !important;
+    display: block !important;
+  }
+
+  #home {
+    padding: 20px 0 !important; /* reduce section size */
+  }
+}
+
 
 
 
