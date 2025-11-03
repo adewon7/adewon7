@@ -281,7 +281,7 @@
       if (home) home.style.display = 'block';
     });
   </script>
-  <script type="text/babel">
+<script type="text/babel">
   function ContactForm() {
     const [formData, setFormData] = React.useState({
       name: '',
@@ -290,6 +290,7 @@
     });
 
     const [status, setStatus] = React.useState('idle');
+    const [showPopup, setShowPopup] = React.useState(false);
 
     function handleChange(e) {
       const { name, value } = e.target;
@@ -301,17 +302,19 @@
       setStatus('sending');
 
       try {
-        const response = await fetch('https://formspree.io/f/xkgplzpj', { // <-- replace with your endpoint
+        const response = await fetch('https://formspree.io/f/xkgplzpj', { // replace with your actual endpoint
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
         });
 
         if (response.ok) {
           setStatus('success');
           setFormData({ name: '', email: '', message: '' });
+          setShowPopup(true);
+
+          // Hide popup automatically after 3 seconds
+          setTimeout(() => setShowPopup(false), 3000);
         } else {
           setStatus('error');
         }
@@ -321,50 +324,58 @@
     }
 
     return (
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h3>Contact Me</h3>
+      <>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <h3>Contact Me</h3>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="4"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-        <button type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? 'Sending...' : 'Send Message'}
-        </button>
+          <button type="submit" disabled={status === 'sending'}>
+            {status === 'sending' ? 'Sending...' : 'Send Message'}
+          </button>
 
-        {status === 'success' && (
-          <p className="thank-you">Message sent successfully. I’ll get back to you soon.</p>
+          {status === 'error' && (
+            <p style={{ color: 'red' }}>Something went wrong. Please try again.</p>
+          )}
+        </form>
+
+        {showPopup && (
+          <div className="popup">
+            <div className="popup-content">
+              <h4>Message Sent!</h4>
+              <p>Thanks for reaching out. I’ll reply soon.</p>
+            </div>
+          </div>
         )}
-        {status === 'error' && (
-          <p style={{ color: 'red' }}>Something went wrong. Please try again later.</p>
-        )}
-      </form>
+      </>
     );
   }
 
   ReactDOM.createRoot(document.getElementById('react-contact')).render(<ContactForm />);
 </script>
-
 </body>
 </html>
+
