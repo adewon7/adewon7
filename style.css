@@ -2418,7 +2418,7 @@ small { font-size: 0.875rem; }       /* 14px */
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  animation: slideUp 0.3s ease;
+  animation: slideUp 0.2s ease;
 }
 
 @keyframes fadeIn {
@@ -2430,4 +2430,5 @@ small { font-size: 0.875rem; }       /* 14px */
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
 
