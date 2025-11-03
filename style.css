@@ -2033,7 +2033,7 @@ body.dark-mode .download-btn:hover {
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 4px; /* Smaller gap so everything fits */
+    gap: 8px; /* Smaller gap so everything fits */
     flex-wrap: nowrap;
   }
 
@@ -2044,6 +2044,35 @@ body.dark-mode .download-btn:hover {
 
   .switch {
     transform: scale(0.8); /* Make dark mode switch smaller */
+  }
+}
+/* Force navbar into a single row on mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 5px 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 3px 5px;
+    white-space: nowrap; /* Keep text from breaking into new lines */
+  }
+
+  .switch {
+    transform: scale(0.75);
   }
 }
 /* Force navbar into a single row on mobile */
@@ -2333,21 +2362,41 @@ small { font-size: 0.875rem; }       /* 14px */
     font-size: 15px;
   }
 }
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  font-family: inherit;
+}
 
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
 
+.contact-form button {
+  background-color: #007bff; /* change to your theme color */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
+.contact-form button:hover {
+  background-color: #0056b3;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.thank-you {
+  text-align: center;
+  padding: 20px;
+}
 
