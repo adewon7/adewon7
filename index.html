@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Adeyemo Abdullahi | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport " content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Meta Tags -->
@@ -15,6 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -42,9 +47,11 @@
   <section id="home" class="page-section">
     <div class="hero-content container">
      <section class="hero">
-      <h1>Adeyemo Abdullahi</h1>
-      <p>Software Developer & Social Media Manager</p>
+       <h1>Adeyemo Abdullahi
+       </h1>
+       <p>Software Developer  & Social Media Manager</p>
      </section>
+
       <div class="hero-image">
         <img src="adepro.jpg" alt="Adeyemo Abdullahi" />
       </div>
@@ -191,14 +198,7 @@
   <!-- Contact -->
   <section id="contact" class="page-section" style="display: none;">
      <div class="container">
-       <h2>Let's Work Together</h2>
-       <p>If you have a project in mind or just want to say hello, feel free to reach out.</p>
-       <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-         <input type="text" name="name" placeholder="Your name" required>
-         <input type="email" name="email" placeholder="Your email" required>
-         <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-         <button type="submit" class="btn">Send Message</button>
-       </form>
+         <div id="react-contact"></div>
      </div>
       <div class="contact-socials" style="margin-top: 50px; text-align: center;">
      <a href="https://x.com/adebit7" target="_blank" style="margin: 0 35px; font-size: 5.5rem; color: #000;">
@@ -241,6 +241,13 @@
   <button id="backToTop" title="Go to top">⬆️</button>
 
   <!-- Scripts -->
+   <!-- React and ReactDOM -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   <script>
     const toggle = document.getElementById('toggle-theme');
     const body = document.body;
@@ -274,8 +281,90 @@
       if (home) home.style.display = 'block';
     });
   </script>
+  <script type="text/babel">
+  function ContactForm() {
+    const [formData, setFormData] = React.useState({
+      name: '',
+      email: '',
+      message: ''
+    });
+
+    const [status, setStatus] = React.useState('idle');
+
+    function handleChange(e) {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      setStatus('sending');
+
+      try {
+        const response = await fetch('https://formspree.io/f/xkgplzpj', { // <-- replace with your endpoint
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          setStatus('success');
+          setFormData({ name: '', email: '', message: '' });
+        } else {
+          setStatus('error');
+        }
+      } catch (err) {
+        setStatus('error');
+      }
+    }
+
+    return (
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h3>Contact Me</h3>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="4"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+
+        <button type="submit" disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending...' : 'Send Message'}
+        </button>
+
+        {status === 'success' && (
+          <p className="thank-you">Message sent successfully. I’ll get back to you soon.</p>
+        )}
+        {status === 'error' && (
+          <p style={{ color: 'red' }}>Something went wrong. Please try again later.</p>
+        )}
+      </form>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('react-contact')).render(<ContactForm />);
+</script>
+
 </body>
 </html>
-
-
-
